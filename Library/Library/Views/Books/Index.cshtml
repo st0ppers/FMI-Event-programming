@@ -1,0 +1,32 @@
+﻿@model List< Library.Models.Book>
+@{
+}
+
+<h1>Books</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Price</th>
+			<th>Pages</th>
+			<th>Author</th>
+			<th>Genre</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var book in Model)
+		{
+			<tr>
+				<td>@book.Id</td>
+				<td>@book.Title</td>
+				<td>@book.Price</td>
+				<td>@book.Pgaes</td>
+				<td>@book.Author</td>
+				<td>@book.Genre</td>
+				<td><a href="Books/View/@book.Id">View</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

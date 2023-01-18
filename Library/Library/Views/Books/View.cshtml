@@ -1,0 +1,44 @@
+﻿@model Library.Models.AddAndUpdateBook
+@{
+}
+
+<h1>Eddit book</h1>
+<form method="post" action="View" class="mt-5">
+
+	<div class="mb-3">
+		<label for="" class="form-label">Id</label>
+		<input type="text" class="form-control" asp-for="Id"readonly>
+	</div>
+
+	<div class="mb-3">
+		<label for="" class="form-label">Title</label>
+		<input type="text" class="form-control" asp-for="Title">
+	</div>
+
+	<div class="mb-3">
+		<label for="" class="form-label">Pages</label>
+		<input type="number" class="form-control" asp-for="Pages">
+	</div>
+
+	<div class="mb-3">
+		<label for="" class="form-label">Price</label>
+		<input type="number" class="form-control" asp-for="Price">
+	</div>
+
+	<div class="mb-3">
+		<label for="" class="form-label">Author</label>
+		<input type="text" class="form-control" asp-for="Author">
+	</div>
+
+	<div class="mb-3">
+		<label for="" class="form-label">Genre</label>
+		<input type="text" class="form-control" asp-for="Genre">
+	</div>
+
+	<button type="submit" class="btn btn-primary">Submit</button>
+
+	<button type="submit" class="btn btn-danger"
+			asp-action="Delete"
+	asp-controller="Books">Delete</button>
+
+</form>

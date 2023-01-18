@@ -1,0 +1,24 @@
+﻿@model List<Library.Models.Genre>
+@{
+}
+
+<h1>Genres</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var genre in Model)
+		{
+				<tr>
+				<td>@genre.Id</td>
+				<td>@genre.Name</td>
+				<td><a href="Genres/View/@genre.Id">View</a></td>
+				</tr>
+		}
+	</tbody>
+</table>

@@ -1,0 +1,24 @@
+﻿@model List<Library.Models.Author>
+@{
+}
+
+<h1>Authors</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var author in Model)
+		{
+			<tr>
+				<td>@author.Id</td>
+				<td>@author.Name</td>
+				<td><a href="Authors/View/@author.Id">View</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
